@@ -21,11 +21,13 @@ class _AppFirebaseState extends State<AppFirebase> {
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Material(
-              child: Center(
-                  child: Text(
-            "Não foi possível inicializar o Firebase",
-            textDirection: TextDirection.ltr,
-          )));
+            child: Center(
+              child: Text(
+                "Não foi possível inicializar o Firebase",
+                textDirection: TextDirection.ltr,
+              ),
+            ),
+          );
         }
 
         if (snapshot.connectionState == ConnectionState.done) {

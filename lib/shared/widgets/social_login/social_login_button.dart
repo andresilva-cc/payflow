@@ -12,30 +12,42 @@ class SocialLoginButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-          height: 56,
-          decoration: BoxDecoration(
-              color: AppColors.shape,
-              borderRadius: BorderRadius.circular(5),
-              border:
-                  Border.fromBorderSide(BorderSide(color: AppColors.stroke))),
-          child: Row(
-            children: [
-              Container(
-                  height: 56,
-                  width: 56,
-                  decoration: BoxDecoration(
-                      border:
-                          Border(right: BorderSide(color: AppColors.stroke))),
-                  child: Image.asset(AppImages.google)),
-              Expanded(
-                  child: Row(
+        height: 56,
+        decoration: BoxDecoration(
+          color: AppColors.shape,
+          borderRadius: BorderRadius.circular(5),
+          border: Border.fromBorderSide(
+            BorderSide(color: AppColors.stroke),
+          ),
+        ),
+        child: Row(
+          children: [
+            Container(
+              height: 56,
+              width: 56,
+              decoration: BoxDecoration(
+                border: Border(
+                  right: BorderSide(
+                    color: AppColors.stroke,
+                  ),
+                ),
+              ),
+              child: Image.asset(AppImages.google),
+            ),
+            Expanded(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Entrar com Google", style: TextStyles.buttonGray),
+                  Text(
+                    "Entrar com Google",
+                    style: TextStyles.buttonGray,
+                  ),
                 ],
-              )),
-            ],
-          )),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
